@@ -1,0 +1,35 @@
+server:
+  port: 8383
+spring:
+  datasource:
+    one:
+      url: jdbc:mysql://144.126.212.235:3306/biubiu?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: LLL123456
+      type: com.alibaba.druid.pool.DruidDataSource
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+      maxLifetime: 20000
+      maxPoolSize: 25
+      minPoolSize: 3
+      uniqueResourceName: oneSource
+    two:
+      url: jdbc:mysql://144.126.212.235:3306/pipi?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: LLL123456
+      type: com.alibaba.druid.pool.DruidDataSource
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+      maxLifetime: 20000
+      maxPoolSize: 25
+      minPoolSize: 3
+      uniqueResourceName: twoSource
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
